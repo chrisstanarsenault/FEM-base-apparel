@@ -19,31 +19,38 @@
     <link rel="stylesheet" href="./styles/index.css" />
 
     <title>Frontend Mentor | Base Apparel coming soon page</title>
-
-    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-    <style>
-      .attribution {
-        font-size: 11px;
-        text-align: center;
-      }
-      .attribution a {
-        color: hsl(228, 45%, 44%);
-      }
-    </style>
   </head>
   <body>
-    We're coming soon Hello fellow shoppers! We're currently building our new
-    fashion store. Add your email below to stay up-to-date with announcements
-    and our launch deals. Email Address
+    <article class="main-card-container">
+      <section class="info-container">
+        <header><img src="./images/logo.svg" alt="base apparel logo" /></header>
 
-    <footer>
-      <p class="attribution">
-        Challenge by
-        <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
-          >Frontend Mentor</a
-        >. Coded by
-        <a href="https://www.chrisarsenault.dev">Chris Arsenault</a>.
-      </p>
-    </footer>
+        <section class="info-text-and-form">
+          <header>
+            <h1><span>We're </span>coming soon</h1>
+          </header>
+          <main>
+            <p>
+              Hello fellow shoppers! We're currently building our new fashion
+              store. Add your email below to stay up-to-date with announcements
+              and our launch deals.
+            </p>
+          </main>
+          <form action="#" novalidate>
+            <input
+              id="email-text-box"
+              class="text-box"
+              type="email"
+              placeholder="Email Address"
+              required
+            />
+            <input class="submit-button" type="submit" value=">" />
+          </form>
+          <p class="error-text" aria-live="polite">Error</p>
+        </section>
+      </section>
+      <img class="hero-image" src="images/hero-desktop.jpg" />
+    </article>
+    <script src="scripts/app.js"></script>
   </body>
 </html>

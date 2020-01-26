@@ -1,23 +1,135 @@
-//Colors
-//Primary
+// ----------Colors----------
+// --------------------------
+
+// Primary
 $desaturatedRed: hsl(0, 36%, 70%);
 $softRed: hsl(0, 93%, 68%);
 
-//Neutral
+// Neutral
 $darkGrayRed: hsl(0, 6%, 24%);
 
-//Gradients
+// Gradients
+
 $lightRoseGrad: linear-gradient(135deg, hsl(0, 0%, 100%), hsl(0, 100%, 98%));
 $medRoseGrad: linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
+// --------------------------
+// --------------------------
 
 //Font-Family
 $josefin: "Josefin Sans", sans-serif;
 
+// ----------Styling---------
+// --------------------------
+
 body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
   box-sizing: border-box;
   font-size: 16px;
   width: 1440px;
   margin-left: auto;
   margin-right: auto;
-  // text-align: center;
+  font-family: $josefin;
+}
+
+.main-card-container {
+  background-image: url("../images/bg-pattern-desktop.svg");
+  height: 802px;
+  width: 100%;
+  box-shadow: 0 0 20px #ccc;
+
+  & .info-container {
+    position: relative;
+    display: inline-block;
+    width: 51rem;
+    max-width: 27.5rem;
+    vertical-align: top;
+    padding: 5.125rem 0 0 10.5625rem;
+
+    & .info-text-and-form {
+      padding-top: 3rem;
+    }
+
+    & .info-text-and-form header h1 {
+      font-size: 60px;
+      text-transform: uppercase;
+      letter-spacing: 15px;
+      line-height: 65px;
+      margin-bottom: 0;
+
+      & span {
+        font-weight: 300;
+        color: $desaturatedRed;
+      }
+    }
+
+    & main p {
+      color: $desaturatedRed;
+      line-height: 30px;
+    }
+  }
+
+  & .hero-image {
+    border: 1px solid orange;
+    float: right;
+  }
+
+  & .error-text {
+    padding: 0 0 0 1.5rem;
+    color: $desaturatedRed;
+    font-weight: 600;
+    visibility: hidden;
+  }
+
+  & .active {
+    visibility: visible;
+  }
+
+  & form {
+    height: 3.5rem;
+    margin-top: 1.25rem;
+
+    & .text-box {
+      color: $darkGrayRed;
+      padding: 0 0 0 1.5rem;
+      font-size: 1rem;
+      display: inline-block;
+      width: 79%;
+      height: 52px;
+      border: 1px solid $desaturatedRed;
+      border-radius: 25px;
+
+      &::placeholder {
+        font-weight: 200;
+        color: $desaturatedRed;
+      }
+    }
+
+    & .active {
+      border-color: $softRed;
+    }
+
+    & .submit-button {
+      color: white;
+      font-size: 20px;
+      margin-left: -56px;
+      border-radius: 25px;
+      height: 3.42rem;
+      width: 115px;
+      background-image: $medRoseGrad;
+      display: inline-block;
+      border: 0;
+
+      transition: all 0.4s ease-out;
+
+      &:hover {
+        transform: translateX(-7px);
+        box-shadow: 0 0 10px 0.001px $darkGrayRed;
+        cursor: pointer;
+      }
+    }
+  }
 }

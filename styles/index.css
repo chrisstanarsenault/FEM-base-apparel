@@ -1,9 +1,99 @@
 body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
   box-sizing: border-box;
   font-size: 16px;
   width: 1440px;
   margin-left: auto;
   margin-right: auto;
+  font-family: "Josefin Sans", sans-serif;
+}
+
+.main-card-container {
+  background-image: url("../images/bg-pattern-desktop.svg");
+  height: 802px;
+  width: 100%;
+  box-shadow: 0 0 20px #ccc;
+}
+.main-card-container .info-container {
+  position: relative;
+  display: inline-block;
+  width: 51rem;
+  max-width: 27.5rem;
+  vertical-align: top;
+  padding: 5.125rem 0 0 10.5625rem;
+}
+.main-card-container .info-container .info-text-and-form {
+  padding-top: 3rem;
+}
+.main-card-container .info-container .info-text-and-form header h1 {
+  font-size: 60px;
+  text-transform: uppercase;
+  letter-spacing: 15px;
+  line-height: 65px;
+  margin-bottom: 0;
+}
+.main-card-container .info-container .info-text-and-form header h1 span {
+  font-weight: 300;
+  color: #ce9797;
+}
+.main-card-container .info-container main p {
+  color: #ce9797;
+  line-height: 30px;
+}
+.main-card-container .hero-image {
+  border: 1px solid orange;
+  float: right;
+}
+.main-card-container .error-text {
+  padding: 0 0 0 1.5rem;
+  color: #ce9797;
+  font-weight: 600;
+  visibility: hidden;
+}
+.main-card-container .active {
+  visibility: visible;
+}
+.main-card-container form {
+  height: 3.5rem;
+  margin-top: 1.25rem;
+}
+.main-card-container form .text-box {
+  color: #413a3a;
+  padding: 0 0 0 1.5rem;
+  font-size: 1rem;
+  display: inline-block;
+  width: 79%;
+  height: 52px;
+  border: 1px solid #ce9797;
+  border-radius: 25px;
+}
+.main-card-container form .text-box::placeholder {
+  font-weight: 200;
+  color: #ce9797;
+}
+.main-card-container form .active {
+  border-color: #f96262;
+}
+.main-card-container form .submit-button {
+  color: white;
+  font-size: 20px;
+  margin-left: -56px;
+  border-radius: 25px;
+  height: 3.42rem;
+  width: 115px;
+  background-image: linear-gradient(135deg, #f8bfbf, #ee8c8c);
+  display: inline-block;
+  border: 0;
+  transition: all 0.4s ease-out;
+}
+.main-card-container form .submit-button:hover {
+  transform: translateX(-7px);
+  box-shadow: 0 0 10px 0.001px #413a3a;
+  cursor: pointer;
 }
 
 /*# sourceMappingURL=index.css.map */
